@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CamScript
+    - EnemyScript
     - GameScript
     - JumpTouchScript
     - LeftTouchScript
@@ -9,6 +10,10 @@ ScriptsOnlyBuild:
     - RightTouchScript
     - SpearScript
     - ThrowTouchScript
+    Unity.2D.Tilemap.Editor.dll:
+    - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.SceneViewGridManager
+    - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.CollabProxy.Editor.dll:
     - Unity.Cloud.Collaborate.UserInterface.CollaborateWindow
     - Unity.Cloud.Collaborate.UserInterface.WindowCache
@@ -44,7 +49,13 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -53,6 +64,8 @@ ScriptsOnlyBuild:
     - Class: 60
       Script: {instanceID: 0}
     - Class: 61
+      Script: {instanceID: 0}
+    - Class: 65
       Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
@@ -73,35 +86,37 @@ ScriptsOnlyBuild:
     - Class: 111
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11716}
+      Script: {instanceID: 11722}
     - Class: 114
-      Script: {instanceID: 11790}
+      Script: {instanceID: 11796}
     - Class: 114
-      Script: {instanceID: 11904}
+      Script: {instanceID: 11858}
     - Class: 114
-      Script: {instanceID: 11938}
+      Script: {instanceID: 11924}
     - Class: 114
-      Script: {instanceID: 11946}
+      Script: {instanceID: 11958}
     - Class: 114
-      Script: {instanceID: 12392}
+      Script: {instanceID: 11966}
     - Class: 114
-      Script: {instanceID: 12842}
+      Script: {instanceID: 12434}
     - Class: 114
-      Script: {instanceID: 12864}
+      Script: {instanceID: 12908}
     - Class: 114
-      Script: {instanceID: 12984}
+      Script: {instanceID: 12932}
     - Class: 114
-      Script: {instanceID: 13126}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13200}
+      Script: {instanceID: 13204}
     - Class: 114
-      Script: {instanceID: 13422}
+      Script: {instanceID: 13278}
     - Class: 114
-      Script: {instanceID: 13522}
+      Script: {instanceID: 13512}
     - Class: 114
-      Script: {instanceID: 13724}
+      Script: {instanceID: 13620}
     - Class: 114
-      Script: {instanceID: 13818}
+      Script: {instanceID: 13828}
+    - Class: 114
+      Script: {instanceID: 13928}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -167,6 +182,18 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: 47042125fbe38e6482d82fc686efb409
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyScript
+  - hash:
+      serializedVersion: 2
+      Hash: 04e4a8b0447477cc4e933d9e5311188f
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: ArmModel
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -203,7 +230,7 @@ ScriptsOnlyBuild:
     className: TouchInputModule
   - hash:
       serializedVersion: 2
-      Hash: a7f2764c880d8aa946a22eb968bc2d15
+      Hash: 19ddcaa119566d6d46aefc0e1ba5917d
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -281,6 +308,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
+      Hash: 52bcb9c2a78bdd8d98a59e915c346e75
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: TransitionArmModel
+  - hash:
+      serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -291,6 +324,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: d251bf88db6c95a6b1aa0b69298da9ef
+    assemblyName: UnityEngine.SpatialTracking.dll
+    namespaceName: UnityEngine.SpatialTracking
+    className: TrackedPoseDriver
   - hash:
       serializedVersion: 2
       Hash: caa533b001ae39b864ba8425019e2268
@@ -413,7 +452,7 @@ ScriptsOnlyBuild:
     className: TMP_FontAsset
   - hash:
       serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+      Hash: 4ec9d34a8262fdbaa1bd9618c149ed58
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameScript
@@ -449,6 +488,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: 24c74cc0d527a06113f2b967042769f0
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEditor.XR.LegacyInputHelpers
+    className: CameraOffset
+  - hash:
+      serializedVersion: 2
       Hash: 760787567e1b60d64a3e421ab83ee14a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -477,6 +522,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: JumpTouchScript
+  - hash:
+      serializedVersion: 2
+      Hash: 893dbdbfe611d62e230a686ea89f1efd
+    assemblyName: UnityEngine.XR.LegacyInputHelpers.dll
+    namespaceName: UnityEngine.XR.LegacyInputHelpers
+    className: SwingArmModel
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -594,4 +645,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/ghosts n goblins.unity
-  playerPath: D:/==TEMP==/UnityProjs/New Unity Project/Builds/New Unity Project.exe
+  playerPath: F:/Unity Builds/GNGMobile/New Unity Project.exe
